@@ -12,13 +12,13 @@ const CategoryList = [
 ]
 
 const Home = () => (
-  <div>
+  <div className={styles.home}>
     <Head>
       <title>Home</title>
       <link rel='icon' href='/favicon.ico' />
     </Head>
     <Nav />
-    <div className='content'>
+    <div className={styles.content}>
       <GoldList />
       <Github />
     </div>
