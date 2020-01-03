@@ -13,7 +13,6 @@ app.prepare().then(() => {
     // server.use('/resources', proxy('http://localhost:4001', {
     https: true,
     proxyReqPathResolver: (req) => {
-      console.log('xxx', req.url)
       return '/resources' + req.url
     },
 

@@ -8,7 +8,6 @@ const FETCH_GOLD = Prefix + 'FETCH_GOLD'
 export const fetchGoldList = query => {
   return async (dispatch, getState) => {
     const res = await API.getGold(query)
-    // console.log('xxx', res.data.data)
     return dispatch({
       type: FETCH_GOLD,
       list: res.data.data,
@@ -25,7 +24,6 @@ const defaultState = {
 export default (state = defaultState, action) => {
   switch (action.type) {
     case FETCH_GOLD:
-      // console.log('actions', action)
       const newState = {
         ...state,
         list: action.list
