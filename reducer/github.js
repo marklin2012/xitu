@@ -1,18 +1,17 @@
 import API from "../service/API"
 
-const Prefix = 'GOLD_'
+const Prefix = 'Github_'
 // type
-const FETCH_GOLD = Prefix + 'FETCH_GOLD'
+const FETCH_Github = Prefix + 'FETCH_Github'
 
 // actions
-export const fetchGoldList = query => {
-  console.log('fetchGoldList', query)
+export const fetchGithubList = query => {
+  console.log('fetchGithubList', query)
   return async (dispatch, getState) => {
-    console.log('dispatch:', API.getGold)
-    const res = await API.getGold(query)
-    // console.log('xxx', res.data.data)
+    const res = await API.getGithub(query)
+    console.log('xxx', res.data.data)
     return dispatch({
-      type: FETCH_GOLD,
+      type: FETCH_Github,
       list: res.data.data,
     })
   }
@@ -26,7 +25,7 @@ const defaultState = {
 // reducer
 export default (state = defaultState, action) => {
   switch (action.type) {
-    case FETCH_GOLD:
+    case FETCH_Github:
       // console.log('actions', action)
       const newState = {
         ...state,
