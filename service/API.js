@@ -1,7 +1,6 @@
 import Axios from 'axios'
 
 const isServer = !process.browser
-console.log('isServer:', isServer)
 const api = isServer
   ? Axios.create({
     baseURL: 'http://localhost:3000',
@@ -10,9 +9,7 @@ const api = isServer
     baseURL: '/'
   })
 const API = {
-  getGold: (params) => api.post('/resources/gold', params).catch(error => {
-    console.log(error.response)
-  }),
+  getGold: (params) => api.post('/resources/gold', params),
   getGithub: (params) => api.post('/resources/github', params),
 }
 
