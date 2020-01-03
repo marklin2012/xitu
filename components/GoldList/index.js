@@ -6,11 +6,7 @@ import { connect } from 'react-redux'
 import goldAction from '../../reducer/gold'
 import { size, map } from 'lodash'
 import { List } from 'antd'
-import moment from 'moment'
 import Item from './Item'
-// const axios = Axios.create({
-//   baseURL: 'http://localhost:3000'
-// })
 
 function GoldList(props) {
 
@@ -32,26 +28,21 @@ function GoldList(props) {
     const res = await Axios.post('/resources/gold', para)
     // console.log('res:', res)
   }
-  console.log('list:', props.list)
   return <div className={styles.gold_list}>
     <Header />
-    <List>
-      {map(props.list, item => {
-        return <Item item={item} key={item.id} />
-      })}
-    </List>
+    <List className={styles.list_body} dataSource={props.list} renderItem={item => {
+      return <Item item={item} key={item.id} />
+    }} />
   </div>
 }
 
 const mapStateToProps = state => {
-  console.log('mapStateToProps', state)
   return {
     list: state.gold.list
   }
 }
 
 const mapDispatchToRrops = dispatch => {
-  console.log('tesst:', goldAction)
   return dispatch(goldAction)
 }
 
