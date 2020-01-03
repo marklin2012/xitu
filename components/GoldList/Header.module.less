@@ -1,0 +1,39 @@
+.gold_header {
+  display: flex;
+  margin: 0 9px 14px 0;
+  min-height: 42px;
+  background-color: #fff;
+  border-radius: 2px;
+  z-index: 250;
+  align-items: center;
+  .title {
+    display: flex;
+    align-items: center;
+    .title_icon {
+      width: 34px;
+      height: 34px;
+      border-radius: 2px;
+      margin: 0 12px 0 5px;
+    }
+    .title_name {
+      color: rgb(4, 74, 171);
+      margin: 0 12px 0 0;
+      opacity: 1;
+      font-size: 16px;
+    }
+  }
+  :global {
+    .ant-select-selection {
+      display: flex;
+      -ms-flex-align: center;
+      align-items: center;
+      position: relative;
+      width: 96px;
+      height: 30px;
+      border-radius: 2px;
+      color: #646c7b;
+      background-color: #f8f9fb;
+      cursor: pointer;
+    }
+  }
+}

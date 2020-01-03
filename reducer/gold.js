@@ -6,9 +6,7 @@ const FETCH_GOLD = Prefix + 'FETCH_GOLD'
 
 // actions
 export const fetchGoldList = query => {
-  console.log('fetchGoldList', query)
   return async (dispatch, getState) => {
-    console.log('dispatch:', API.getGold)
     const res = await API.getGold(query)
     // console.log('xxx', res.data.data)
     return dispatch({
@@ -32,7 +30,6 @@ export default (state = defaultState, action) => {
         ...state,
         list: action.list
       }
-      console.log('actions:', newState.list.length)
       return newState
     default:
       return state
