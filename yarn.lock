@@ -4126,10 +4126,10 @@ mkdirp@0.5.1, mkdirp@^0.5.0, mkdirp@^0.5.1:
   dependencies:
     minimist "0.0.8"
 
-moment@2.x, moment@^2.24.0:
-  version "2.24.0"
-  resolved "https://registry.npm.taobao.org/moment/download/moment-2.24.0.tgz#0d055d53f5052aa653c9f6eb68bb5d12bf5c2b5b"
-  integrity sha1-DQVdU/UFKqZTyfbraLtdEr9cK1s=
+moment@2.x, moment@^2.24.0, moment@^2.29.4:
+  version "2.29.4"
+  resolved "https://registry.yarnpkg.com/moment/-/moment-2.29.4.tgz#3dbe052889fe7c1b2ed966fcb3a77328964ef108"
+  integrity sha512-5LC9SOxjSc2HF6vO2CyuTDNivEdoz2IvyJJGj6X8DJ0eFyfszE0QiEd+iXmBvUP3WHxSjFH/vIsA0EN00cgr8w==
 
 move-concurrently@^1.0.1:
   version "1.0.1"
@@ -5178,11 +5178,6 @@ promise@^7.1.1:
   integrity sha1-BktyYCsY+Q8pGSuLG8QY/9Hr078=
   dependencies:
     asap "~2.0.3"
-
-prop-type@^0.0.1:
-  version "0.0.1"
-  resolved "https://registry.npm.taobao.org/prop-type/download/prop-type-0.0.1.tgz#4a211359cc622f7d2d1eee14d34afb7dfe7ea64e"
-  integrity sha1-SiETWcxiL30tHu4U00r7ff5+pk4=
 
 prop-types-exact@1.2.0:
   version "1.2.0"
